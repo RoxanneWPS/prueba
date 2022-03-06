@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9.00 by: Nights2K</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    body {
+        font: 400 1em/1.5 "Neuton";
+        background: #090d00;
+        color: rgba(255, 255, 255, 0.25);
+        text-align: center;
+        margin: 0;
+    }
+
+    h2{
+        color: white;
+    }
+
+    p{
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+    }
+    a{
+        text-decoration:none;
+    }
+button {
+  margin: 14px;
+  align-self: center;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 
+    1px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all .3s ease-out 
+}
+.btn-3 {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  text-transform: uppercase;
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover{
+  background: transparent;
+  box-shadow: none;
+  text-transform: capitalize;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover{
+   color: rgba(2,126,251,1);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
+.btn-4 {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  text-transform: uppercase;
+  right: 584px;
+  top: 55px;
+}
+.btn-4 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-4:before,
+.btn-4:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-4:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-4:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-4:hover{
+  background: transparent;
+  box-shadow: none;
+  text-transform: capitalize;
+}
+.btn-4:hover:before {
+  height: 100%;
+}
+.btn-4:hover:after {
+  width: 100%;
+}
+.btn-4 span:hover{
+   color: rgba(2,126,251,1);
+}
+.btn-4 span:before,
+.btn-4 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-4 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-4 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-4 span:hover:before {
+  height: 100%;
+}
+.btn-4 span:hover:after {
+  width: 100%;
+}
+.modal-contenido{
+  background-color:rgb(71, 71, 71);
+  width:300px;
+  padding: 10px 20px;
+  margin: 20% auto;
+  position: relative;
+  top: -238px;
+  border-radius: 59px;
+  border: 6px solid white;
+}
+.modal{
+  background-color: rgba(0,0,0,.8);
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity:0;
+  pointer-events:none;
+  transition: all 1s;
+}
+.settings{
+  background-color: rgba(0,0,0,.8);
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity:0;
+  pointer-events:none;
+  transition: all 1s;
+}
+#settings:target{
+  opacity:1;
+  pointer-events:auto;
+}
+#miModal:target{
+  opacity:1;
+  pointer-events:auto;
+}
+span{
+    color: white;
+}
+</style>
+<body>
+  <a href="#settings" class="custom-btn btn-4"><span>SETTINGS</span></a>
+  <a href="#miModal" class="custom-btn btn-4"><span>CREDITS</span></a>
+  <h2>AUTO GOLDHEN + PAYLOADS</h2>
+    <p>Utils</p>
+    <div class="SPACE">
+        <button class="custom-btn btn-3"><span>FTP</span></button>
+        <button class="custom-btn btn-3"><span>BINLOADER</span></button>
+        <button class="custom-btn btn-3"><span>APP2USB</span></button>
+        <button class="custom-btn btn-3"><span>DUMPER</span></button>
+        <button class="custom-btn btn-3"><span>PS4 DEBUG</span></button>
+        <button class="custom-btn btn-3"><span>ORBIS </span></button>
+        <button class="custom-btn btn-3"><span>TODEX</span></button>
+    </div>
+    <div class="SPACE">
+        <button class="custom-btn btn-3"><span>BACKUP</span></button>
+        <button class="custom-btn btn-3"><span>HISTORYBLOCK</span></button>
+        <button class="custom-btn btn-3"><span>PARENTAL</span></button>
+        <button class="custom-btn btn-3"><span>WEBRTE</span></button>
+        <button class="custom-btn btn-3"><span>TOOLBOX</span></button>
+        <button class="custom-btn btn-3"><span>K-DUMPER</span></button>
+        <button class="custom-btn btn-3"><span>K-CLOCK</span></button>
+    </div>
+    <p>Linux</p>
+    <div class="SPACE">
+        <button class="custom-btn btn-3"><span>LINUX LOADER</span></button>
+        <button class="custom-btn btn-3"><span>LINUX 2GB</span></button>
+        <button class="custom-btn btn-3"><span>LINUX 3GB</span></button>
+        <button class="custom-btn btn-3"><span>LINUX 4GB</span></button>
+        <button class="custom-btn btn-3"><span>LINUX 5GB</span></button>
+    </div>
+    <p>GTA Mods</p>
+    <div class="SPACE">
+        <button class="custom-btn btn-3"><span>EXPULSION 1.35</span></button>
+        <button class="custom-btn btn-3"><span>EXPULSION 1.38</span></button>
+        <button class="custom-btn btn-3"><span>ARABICGUY 1.32</span></button>
+        <button class="custom-btn btn-3"><span>ARABICGUY 1.33</span></button>
+        <button class="custom-btn btn-3"><span>WILDEMODZ 1.33</span></button>
+        <button class="custom-btn btn-3"><span>WILDEMODZ 1.38</span></button>
+        <button class="custom-btn btn-3"><span>BEEFQUEMOD 1.34</span></button>
+        <button class="custom-btn btn-3"><span>BEEFQUEMOD 1.38</span></button>
+    </div>
+    <p>RDR2 Mods</p>
+    <div class="SPACE">
+        <button class="custom-btn btn-3"><span>OYSTERS 1.00</span></button>
+        <button class="custom-btn btn-3"><span>OYSTERS 1.13</span></button>
+        <button class="custom-btn btn-3"><span>OYSTERS 1.19</span></button>
+        <button class="custom-btn btn-3"><span>OYSTERS 1.24</span></button>
+        <button class="custom-btn btn-3"><span>OYSTERS 1.29</span></button>
+    </div>
+<div id="miModal" class="modal">
+  <div class="modal-contenido">
+    <a class="custom-btn btn-3" href="#"><span>back</span></a>
+    <h2>Credits</h2>
+    <p>Nights2K</p>
+    <p>AlAzif</p>
+    <p>ChendoChap</p>
+    <p>SiSTRo</p>
+    <p>Sleirsgoevy</p>
+    <p>Specter</p>
+    <p>Zecoxao</p>
+    <p>TheWizWikii</p>
+    <p>Santo Oscuro</p>
+    <p>LushModz</p>
+    <p>WildeModz</p>
+    <p>FattyMcGoo</p>
+  </div>  
+</div>
+<div id="settings" class="settings">
+    <div class="modal-contenido">
+      <a class="custom-btn btn-3" href="#"><span>back</span></a>
+      <p>Settings</p>
+      <button class="custom-btn btn-3"><span>OFFLINE VERSION</span></button>
+      <button class="custom-btn btn-3"><span>PARTICLES</span></button>
+      <button class="custom-btn btn-3"><span>GoldHen 2.1.3</span></button><span>Manual Version</span>
+    </div>  
+  </div>
+</body>
+</html>
