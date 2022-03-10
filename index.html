@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>9.00 by: Nights2K</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<script>
+  if (window.applicationCache.status == '0') { window.location.replace("cache.html"); }
+
+  function allset() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("allset").style.display = "block";
+  }
+
+  function awaitpl() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("awaiting").style.display = "block";
+  }
+</script>
+<style>
+  body {
+    font: 400 1em/1.5 "Neuton";
+    background: #090d00;
+    color: rgba(255, 255, 255, 0.25);
+    margin: 0;
+    text-align: center;
+    /* background-image: url("fondo.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+  }
+
+  h2 {
+    color: white;
+    text-shadow: 2px 2px #000000;
+  }
+
+  h5 {
+    color: white;
+    font-size: 20px;
+  }
+
+  h4 {
+    color: white;
+    font-size: 20px;
+  }
+
+  p {
+    color: rgb(229, 255, 0);
+    font-family: sans-serif;
+    font-size: 25px;
+    text-shadow: 2px 2px #000000;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    margin: 14px;
+    align-self: center;
+  }
+
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 1px 2px 2px 0px rgba(255, 255, 255, .5),
+      7px 7px 20px 0px rgba(0, 0, 0, .1),
+      4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: all .3s ease-out
+  }
+
+  .btn-3 {
+    background: rgb(0, 172, 238);
+    background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    text-transform: uppercase;
+    top: -29px;
+  }
+
+  .btn-3 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn-3:before,
+  .btn-3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: rgb(20, 251, 155);
+    transition: all 0.3s ease;
+  }
+
+  .btn-3:before {
+    height: 0%;
+    width: 2px;
+  }
+
+  .btn-3:after {
+    width: 0%;
+    height: 2px;
+  }
+
+  .btn-3:hover:before {
+    height: 100%;
+  }
+
+  .btn-3:hover:after {
+    width: 100%;
+  }
+
+  .btn-3 span:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  .btn-3 span:before,
+  .btn-3 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: rgb(20, 251, 155);
+    transition: all 0.3s ease;
+  }
+
+  .btn-3 span:before {
+    width: 2px;
+    height: 0%;
+  }
+
+  .btn-3 span:after {
+    width: 0%;
+    height: 2px;
+  }
+
+  .btn-3 span:hover:before {
+    height: 100%;
+  }
+
+  .btn-3 span:hover:after {
+    width: 100%;
+  }
+
+  .btn-4 {
+    background: rgb(0, 172, 238);
+    background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    text-transform: uppercase;
+    right: 513px;
+    top: 55px;
+  }
+
+  .btn-4 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn-4:before,
+  .btn-4:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: rgb(20, 251, 155);
+    transition: all 0.3s ease;
+  }
+
+  .btn-4:before {
+    height: 0%;
+    width: 2px;
+  }
+
+  .btn-4:after {
+    width: 0%;
+    height: 2px;
+  }
+
+  .btn-4:hover:before {
+    height: 100%;
+  }
+
+  .btn-4:hover:after {
+    width: 100%;
+  }
+
+  .btn-4 span:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  .btn-4 span:before,
+  .btn-4 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: rgb(20, 251, 155);
+    transition: all 0.3s ease;
+  }
+
+  .btn-4 span:before {
+    width: 2px;
+    height: 0%;
+  }
+
+  .btn-4 span:after {
+    width: 0%;
+    height: 2px;
+  }
+
+  .btn-4 span:hover:before {
+    height: 100%;
+  }
+
+  .btn-4 span:hover:after {
+    width: 100%;
+  }
+
+  .modal-contenido {
+    background-color: rgb(71, 71, 71);
+    width: 300px;
+    padding: 10px 20px;
+    margin: 20% auto;
+    position: relative;
+    top: -312px;
+    border-radius: 59px;
+    border: 6px solid white;
+  }
+
+  .modal-contenido1 {
+    background-color: rgb(71, 71, 71);
+    width: 300px;
+    padding: 10px 20px;
+    margin: 20% auto;
+    position: relative;
+    top: -292px;
+    border-radius: 59px;
+    border: 6px solid white;
+  }
+
+  .credits {
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+  }
+
+  .settings {
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+  }
+
+  .theme1 {
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+  }
+
+  .offline {
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+  }
+
+  #settings:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #credits:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #theme1:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #offline:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  span {
+    color: white;
+    cursor: pointer;
+  }
+
+  .themes {
+    width: 98%;
+    margin: 0 auto;
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+
+  .theme {
+    background-color: rgba(2, 126, 251, 1);
+    /* position: fixed; */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 15px;
+    border-radius: 10px;
+    /* opacity: 0; */
+    /* pointer-events: none; */
+    /* transition: all 1s; */
+  }
+
+  .theme img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .main {
+    text-align: center;
+  }
+
+  .window-notice {
+    background: rgba(33, 41, 52, .85);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    position: fixed;
+    z-index: 999;
+  }
+
+  .window-notice .content {
+    background: rgb(37, 37, 37);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 600px;
+    min-width: 320px !important;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.3rem;
+    border-radius: 10px;
+  }
+
+  .content-text {
+    color: white;
+  }
+</style>
+
+<body>
+  <div class="window-notice" id="window-notice">
+    <div class="content">
+      <div class="content-text">⚠️You are about to enter a 9.00 jailbreak⚠️</h4>
+      </div>
+      <br>
+      <center>
+        <button class="custom-btn btn-3" id="close-button"><span>Start</span></button>
+      </center>
+    </div>
+  </div>
+  <div class="main">
+    <a href="#settings" class="custom-btn btn-4"><span>SETTINGS</span></a>
+    <a href="#credits" class="custom-btn btn-4"><span>CREDITS</span></a>
+    <a class="custom-btn btn-4" href="https://www.paypal.com/paypalme/Nightsk2k"><span>Donate</span></a>
+    <h2>AUTO GOLDHEN + PAYLOADS</h2>
+    <p>UTILS</p>
+    <div class="SPACE">
+      <button class="custom-btn btn-3" onclick=FTP()><span>FTP</span></button>
+      <button class="custom-btn btn-3" onclick=Binloader()><span>BINLOADER</span></button>
+      <button class="custom-btn btn-3" onclick=App2usb()><span>APP2USB</span></button>
+      <button class="custom-btn btn-3" onclick=Dumper()><span>DUMPER</span></button>
+      <button class="custom-btn btn-3" onclick=Ps4Debug()><span>PS4 DEBUG</span></button>
+      <button class="custom-btn btn-3" onclick=orbis()><span>ORBIS </span></button>
+      <button class="custom-btn btn-3" onclick=todex()><span>TODEX</span></button>
+    </div>
+    <div class="SPACE">
+      <button class="custom-btn btn-3" onclick=backup()><span>BACKUP</span></button>
+      <button class="custom-btn btn-3" onclick=historyblock()><span>HISTORYBLOCK</span></button>
+      <button class="custom-btn btn-3" onclick=parental()><span>PARENTAL</span></button>
+      <button class="custom-btn btn-3" onclick=webrte()><span>WEBRTE</span></button>
+      <button class="custom-btn btn-3" onclick=toolbox()><span>TOOLBOX</span></button>
+      <button class="custom-btn btn-3" onclick=Kdumper()><span>K-DUMPER</span></button>
+      <button class="custom-btn btn-3" onclick=kclock()><span>K-CLOCK</span></button>
+    </div>
+    <p>LINUX</p>
+    <div class="SPACE">
+      <button class="custom-btn btn-3" onclick=LinuxL()><span>LINUX LOADER</span></button>
+      <button class="custom-btn btn-3" onclick=Linux2GB()><span>LINUX 2GB</span></button>
+      <button class="custom-btn btn-3" onclick=Linux3GB()><span>LINUX 3GB</span></button>
+      <button class="custom-btn btn-3" onclick=Linux4GB()><span>LINUX 4GB</span></button>
+      <button class="custom-btn btn-3" onclick=Linux5GB()><span>LINUX 5GB</span></button>
+    </div>
+    <p>GTA MODS</p>
+    <div class="SPACE">
+      <button class="custom-btn btn-3" onclick=Expulsion135()><span>EXPULSION 1.35</span></button>
+      <button class="custom-btn btn-3" onclick=Expulsion138()><span>EXPULSION 1.38</span></button>
+      <button class="custom-btn btn-3" onclick=Arabic132()><span>ARABICGUY 1.32</span></button>
+      <button class="custom-btn btn-3" onclick=Arabic133()><span>ARABICGUY 1.33</span></button>
+      <button class="custom-btn btn-3" onclick=wild133()><span>WILDEMODZ 1.33</span></button>
+      <button class="custom-btn btn-3" onclick=wild138()><span>WILDEMODZ 1.38</span></button>
+      <button class="custom-btn btn-3" onclick=beefquemod134()><span>BEEFQUEMOD 1.34</span></button>
+      <button class="custom-btn btn-3" onclick=beefquemod138()><span>BEEFQUEMOD 1.38</span></button>
+    </div>
+    <p>RDR2 MODS</p>
+    <div class="SPACE">
+      <button class="custom-btn btn-3" onclick=oysters1()><span>OYSTERS 1.00</span></button>
+      <button class="custom-btn btn-3" onclick=oysters113()><span>OYSTERS 1.13</span></button>
+      <button class="custom-btn btn-3" onclick=oysters119()><span>OYSTERS 1.19</span></button>
+      <button class="custom-btn btn-3" onclick=oysters124()><span>OYSTERS 1.24</span></button>
+      <button class="custom-btn btn-3" onclick=oysters129()><span>OYSTERS 1.29</span></button>
+    </div>
+  </div>
+  <div id="credits" class="credits">
+    <div class="modal-contenido">
+      <a class="custom-btn btn-3" href="#"><span>back</span></a>
+      <h2>Credits</h2>
+      <p>Nights2K</p>
+      <p>AlAzif</p>
+      <p>ChendoChap</p>
+      <p>SiSTRo</p>
+      <p>Sleirsgoevy</p>
+      <p>Zecoxao</p>
+      <p>TheWizWikii</p>
+      <p>Santo Oscuro</p>
+      <p>LushModz</p>
+      <p>WildeModz</p>
+      <p>FattyMcGoo</p>
+    </div>
+  </div>
+  <div id="settings" class="settings">
+    <div class="modal-contenido">
+      <a class="custom-btn btn-3" href="#"><span>back</span></a>
+      <p>Settings</p>
+      <h5>Offline Version ✔️</h5>
+      <h4 id="PS4fw"></h4>
+      <a href="#theme1"><button class="custom-btn btn-3"><span>THEME</span></button></a>
+      <button class="custom-btn btn-3" onclick=goldhen()><span>GoldHen 2.1.2</span></button><span>Manual Version</span>
+    </div>
+  </div>
+  <div id="theme1" class="theme1">
+    <div class="modal-contenido1">
+      <a class="custom-btn btn-3" href="#"><span>back</span></a>
+      <p>Theme</p>
+      <div class="themes">
+        <div class="theme"><img src="fondo.jpg"><button class="pointer" onclick="set(0)">Select</button></div>
+      </div>
+      <script type="text/javascript">
+        if (localStorage.getItem("theme") == null) {
+          localStorage.setItem("theme", "fondo.jpg")
+        }
+        document.body.style.background = "url('img/" + localStorage.getItem("theme") + "')"
+        document.body.style.backgroundSize = "cover"
+        var imgs = ["fondo.jpg", "fondo1.jpg", "fondo2.jpg"];
+        render()
+        function render() {
+          document.querySelector(".themes").innerHTML = ""
+          for (let i = 0; i < imgs.length; i++) {
+            var selectText = "Select"
+            var textColor = "white"
+            if (localStorage.theme == imgs[i]) {
+              selectText = "Selected"
+              textColor = "black"
+            }
+            document.querySelector(".themes").innerHTML += '<div class="theme" ><img src="img/' + imgs[i] + '" ><span style="color:' + textColor + ';" onclick="set(' + i + ')">' + selectText + '</span></div>';
+          }
+        }
+        function set(i) {
+          localStorage.setItem("theme", imgs[i])
+          render()
+          document.body.style.background = "url('img/" + imgs[i] + "')"
+          document.body.style.backgroundSize = "cover"
+        }
+      </script>
+    </div>
+  </div>
+</body>
+<script>
+  UA = navigator.userAgent.substring(navigator.userAgent.indexOf('5.0 (') + 19, navigator.userAgent.indexOf(') Apple'));
+  PS4fw.innerHTML = "" + UA + " Spoof";
+</script>
+<script src="int/int64.js"></script>
+<script src="int/kexploit.js"></script>
+<script src="int/rop.js"></script>
+<script src="int/webkit.js"></script>
+<script src="int/back.js"></script>
+<script>
+  function toogle_payload(){
+var req = new XMLHttpRequest();
+req.responseType = "arraybuffer";
+req.open("GET",PLfile,true);
+req.send();
+req.onreadystatechange=function(){
+if (req.readyState == 4){
+  var tmp0 = new Uint8Array(req.response.byteLength);
+  tmp0.set(new Uint8Array(req.response), 0);
+  var payload = new Uint32Array(tmp0);
+  the_payload = payload;
+  setTimeout(poc, 1500);
+  }
+};
+}
+
+function FTP(){
+LoadedMSG="FTP Loaded... Press OK Now !!!";
+PLfile = "payloads/ftp.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function App2usb(){
+LoadedMSG="App2USB Loaded... Press OK Now !!!";
+PLfile = "payloads/app2usb.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function Dumper(){
+LoadedMSG="Dumper Loaded... Press OK Now !!!";
+PLfile = "payloads/dumper.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function Ps4Debug(){
+LoadedMSG="PS4 Debug Loaded... Press OK Now !!!";
+PLfile = "payloads/ps4debug 9.00.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function orbis(){
+LoadedMSG="Orbis-Toolbox Loaded... Press OK Now !!!";
+PLfile = "payloads/Orbis-Toolbox-900.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function todex(){
+LoadedMSG="ToDex Loaded... Press OK Now !!!";
+PLfile = "payloads/todex.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function backup(){
+LoadedMSG="Backup Loaded... Press OK Now !!!";
+PLfile = "payloads/backup.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function historyblock(){
+LoadedMSG="History Block Loaded... Press OK Now !!!";
+PLfile = "payloads/historyblocker.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function parental(){
+LoadedMSG="Parental Loaded... Press OK Now !!!";
+PLfile = "payloads/parental.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function webrte(){
+LoadedMSG="Webrte Loaded... Press OK Now !!!";
+PLfile = "payloads/webrte.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function toolbox(){
+LoadedMSG="ToolBox Loaded... Press OK Now !!!";
+PLfile = "payloads/toolbox.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function Kdumper(){
+LoadedMSG="Kernel Dumper Loaded... Press OK Now !!!";
+PLfile = "payloads/kerneldumper.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function kclock(){
+LoadedMSG="Kernel Clock Loaded... Press OK Now !!!";
+PLfile = "payloads/kernelclock.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function LinuxL(){
+LoadedMSG="Linux Loaded... Press OK Now !!!";
+PLfile = "payloads/linux/LinuxLoader-900.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function Linux2GB(){
+LoadedMSG="Linux2GB Loaded... Press OK Now !!!";
+PLfile = "payloads/linux/LinuxLoader-900-2gb.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function Linux3GB(){
+LoadedMSG="Linux3GB Loaded... Press OK Now !!!";
+PLfile = "payloads/linux/LinuxLoader-900-3gb.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function Linux4GB(){
+LoadedMSG="Linux4GB Loaded... Press OK Now !!!";
+PLfile = "payloads/linux/LinuxLoader-900-4gb.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function Linux5GB(){
+LoadedMSG="Linux5GB Loaded... Press OK Now !!!";
+PLfile = "payloads/linux/LinuxLoader-900-5gb.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function Expulsion135(){
+LoadedMSG="Expulsion 1.35 Loaded... Press OK Now !!!";
+PLfile = "payloads/gta/Lush135.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function Expulsion138(){
+LoadedMSG="Expulsion 1.38 Loaded... Press OK Now !!!";
+PLfile = "payloads/gta/Lush138.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function Arabic132(){
+LoadedMSG="ArabicGuy 1.32 Loaded... Press OK Now !!!";
+PLfile = "payloads/gta/arabicguy132.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function Arabic133(){
+LoadedMSG="ArabicGuy 1.33 Loaded... Press OK Now !!!";
+PLfile = "payloads/gta/arabicguy133.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function wild133(){
+LoadedMSG="WildeModz 1.33 Loaded... Press OK Now !!!";
+PLfile = "payloads/gta/WildeModz133.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function wild138(){
+LoadedMSG="WildeModz 1.38 Loaded... Press OK Now !!!";
+PLfile = "payloads/gta/WildeModz138.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function beefquemod134(){
+LoadedMSG="BeefQueefMod 1.34 Loaded... Press OK Now !!!";
+PLfile = "payloads/gta/beefqueefmod134.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function beefquemod138(){
+LoadedMSG="BeefQueefMod 1.38 Loaded... Press OK Now !!!";
+PLfile = "payloads/gta/beefqueefmod138.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function oysters1(){
+LoadedMSG="OystersMenu 1.00 Loaded... Press OK Now !!!";
+PLfile = "payloads/rdr2/oystersmenu100.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function oysters113(){
+LoadedMSG="OystersMenu 1.13 Loaded... Press OK Now !!!";
+PLfile = "payloads/rdr2/oystersmenu113.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function oysters119(){
+LoadedMSG="OystersMenu 1.19 Loaded... Press OK Now !!!";
+PLfile = "payloads/rdr2/oystersmenu119.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function oysters124(){
+LoadedMSG="OystersMenu 1.24 Loaded... Press OK Now !!!";
+PLfile = "payloads/rdr2/oystersmenu124.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function oysters129(){
+LoadedMSG="OystersMenu 1.29 Loaded... Press OK Now !!!";
+PLfile = "payloads/rdr2/oystersmenu129.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function goldhen(){
+LoadedMSG="GoldHen 2.1.2 Loaded... Press OK Now !!!";
+PLfile = "payloads/goldhen_2.1.2_900.bin";
+exec_type = "payload";
+toogle_payload();
+}
+</script>
+</html>
