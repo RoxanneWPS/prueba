@@ -1,0 +1,26 @@
+CACHE MANIFEST 
+
+CACHE: 
+cache.html
+index.html
+img/fondo.jpg
+img/fondo1.jpg
+int/int64.js
+int/rop.js
+int/kexploit.js
+int/webkit.js
+int/back.js
+payloads/app2usb.bin
+payloads/backup.bin
+payloads/dumper.bin
+payloads/ftp.bin
+payloads/goldhen_2.1.2_900.bin
+payloads/historyblocker.bin
+payloads/kernelclock.bin
+payloads/kerneldumper.bin
+payloads/Orbis-Toolbox-900.bin
+payloads/parental.bin
+payloads/ps4debug9.00.bin
+payloads/todex.bin
+payloads/toolbox.bin
+payloads/webrte.bin
